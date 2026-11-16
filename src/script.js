@@ -1,4 +1,5 @@
 
+
 /**
  * Task 1.1: Повернути довжину рядка.
  */
@@ -24,14 +25,14 @@ function trimString(str) {
  * Task 1.4: Повернути останній символ рядка.
  */
 function getLastChar(str) {
-  return str.length === 0 ? '' : str[str.length - 1];
+  return str.charAt(str.length - 1);
 }
 
 /**
  * Task 1.5: Об'єднати два рядки через пробіл.
  */
 function combineStrings(str1, str2) {
-  return str1 + ' ' + str2;
+  return str1 + " " + str2;
 }
 
 /**
@@ -59,7 +60,7 @@ function repeatString(str, count) {
  * Task 1.9: Заповнити початок рядка символом '*'.
  */
 function padStartWithAsterisk(str, targetLength) {
-  return str.padStart(targetLength, '*');
+  return str.padStart(targetLength, "*");
 }
 
 /**
@@ -87,8 +88,8 @@ function checkIsNaN(value) {
  * Task 1.13: Округлити число до вказаної кількості знаків.
  */
 function roundToDecimal(num, decimals) {
-  const multiplier = 10 ** decimals;
-  return Math.round(num * multiplier) / multiplier;
+  const factor = 10 ** decimals;
+  return Math.round((num + Number.EPSILON) * factor) / factor;
 }
 
 /**
@@ -120,14 +121,14 @@ function exponentiate(base, exponent) {
 }
 
 /**
- * Task 1.18: Перетворити значення у числа та повернути суму.
+ * Task 1.18: Сума за допомогою унарних плюсів.
  */
 function sumWithUnaryPlus(a, b) {
   return +a + +b;
 }
 
 /**
- * Task 1.19: Використати складені оператори += та *=.
+ * Task 1.19: Складені оператори.
  */
 function applyCompoundOperators(num, addVal, multVal) {
   num += addVal;
